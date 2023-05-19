@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class kdvhesaplayıcı {
+    public static void main(String[] args) {
+        Scanner imp = new Scanner(System.in);
+
+        double tutar, kdvOran, kdvTutar, kdvliTutar;
+        boolean kdvDurumu;
+
+        System.out.print("Bir Tutar Giriniz :");
+        tutar = imp.nextDouble();
+
+        kdvDurumu=(0<tutar) && (tutar<=1000);
+        kdvOran=kdvDurumu ? 0.18: 0.08;
+
+        kdvTutar = tutar*kdvOran;
+        kdvliTutar = tutar+kdvTutar;
+
+        System.out.println("KDV'siz Tutar :" + tutar);
+        System.out.println("KDV Oranı :" + kdvOran);
+        System.out.println("KDV Tutarı :" + kdvTutar);
+        System.out.println("KDV'li Tutar :" + kdvliTutar);
+
+
+    }
+}
